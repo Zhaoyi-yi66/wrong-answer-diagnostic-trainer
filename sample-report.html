@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>错题诊断与变式训练</title>
+<style>
+:root{--ink:#25243a;--muted:#6f7185;--purple:#5b5bd6;--mint:#24a58f;--sun:#f5b547;--paper:#fff;--wash:#f5f4ff;--line:#e7e5f2}
+*{box-sizing:border-box} body{margin:0;background:#ecebf4;color:var(--ink);font:15px/1.65 "Microsoft YaHei","PingFang SC",sans-serif}
+.page{width:min(920px,calc(100% - 32px));margin:28px auto;background:var(--paper);border-radius:28px;box-shadow:0 18px 60px #34325c1a;overflow:hidden}
+.hero{padding:42px 48px 34px;background:linear-gradient(135deg,#5b5bd6 0%,#7469df 56%,#3bb4a2 100%);color:white;position:relative}
+.hero:after{content:"";position:absolute;width:210px;height:210px;border:42px solid #ffffff18;border-radius:50%;right:-76px;top:-104px}
+.hero .kicker{letter-spacing:.18em;font-size:12px;font-weight:800;opacity:.8} h1{font-size:32px;line-height:1.2;margin:8px 0 22px} .meta{display:flex;gap:10px;flex-wrap:wrap} .meta span{padding:6px 12px;border-radius:999px;background:#ffffff1f;border:1px solid #ffffff35}
+.content{padding:34px 48px 48px} .summary{font-size:20px;font-weight:700;background:#fff7dc;border-left:6px solid var(--sun);padding:20px 22px;border-radius:6px 18px 18px 6px}
+.section-title{display:flex;align-items:center;gap:12px;margin:34px 0 16px} .section-title span{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--wash);color:var(--purple);font-weight:900} .section-title h2{font-size:21px;margin:0}
+.original-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px} .mini{padding:17px;border:1px solid var(--line);border-radius:16px;background:#fcfcff} .mini b{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.diagnosis-card{padding:20px 22px;border:1px solid #dddaf7;border-radius:18px;background:linear-gradient(145deg,#fbfaff,#f5fffd)} .card-head{display:flex;justify-content:space-between;gap:12px;align-items:center} .card-head h3{margin:0} .badge{font-size:12px;background:#e8e6ff;color:#4747bd;border-radius:999px;padding:5px 10px;white-space:nowrap} .muted{color:var(--muted)}
+.explain{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px} .speech{padding:22px;border-radius:20px;background:#e8faf6;font-size:17px;font-weight:700} .steps{margin:0;padding:18px 20px 18px 42px;border:1px solid var(--line);border-radius:20px} .steps li+li{margin-top:8px}
+.practice-block{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:24px 0;border-top:1px dashed #d9d7e7} .eyebrow{font-size:11px;letter-spacing:.14em;color:var(--purple);font-weight:900} .practice-block h3{margin:3px 0 0} .practice-block p{margin:3px 0;color:var(--muted)} .questions{margin:0;padding-left:28px} .questions li{padding:8px 0 13px 5px} .questions i{display:block;border-bottom:1px solid #aaa9ba;margin-top:14px}
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px} .review-card{display:flex;gap:14px;padding:17px;border-radius:18px;background:#fff8e7;border:1px solid #f4ddb0} .calendar{display:grid;place-items:center;min-width:36px;height:36px;border-radius:12px;background:var(--sun);color:white;font-weight:900} .review-card ul{padding-left:18px;margin:6px 0 0}
+.adult{padding:20px;border-radius:18px;background:#f3f2fa;border:1px solid var(--line)}
+.answer-page{page-break-before:always;padding:44px 48px 54px} .answer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px} .answer{display:flex;align-items:center;gap:10px;padding:14px;border-radius:14px;background:var(--wash)} .answer span{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--purple);color:white;font-size:12px} .footer{margin-top:38px;color:var(--muted);font-size:12px;text-align:center}
+@media(max-width:680px){.hero,.content,.answer-page{padding-left:24px;padding-right:24px}.original-grid,.explain,.review-grid{grid-template-columns:1fr}.practice-block{grid-template-columns:1fr;gap:5px}.answer-grid{grid-template-columns:1fr 1fr}}
+@media print{@page{size:A4;margin:10mm}body{background:white}.page{width:100%;margin:0;box-shadow:none;border-radius:0}.hero{padding:28px 34px 24px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.content{padding:22px 34px 30px}.section-title{margin-top:24px}.practice-block{break-inside:avoid;padding:17px 0}.answer-page{padding:20px 34px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <div class="kicker">LEARN FROM THE FIRST DIVERGENCE</div>
+    <h1>错题诊断与变式训练</h1>
+    <div class="meta"><span>示例学生</span><span>三年级</span><span>两位数减法退位</span><span>2026-10-14</span></div>
+  </header>
+  <div class="content">
+    <div class="summary">会列式，但退位后没有同步更新十位。</div>
+    <div class="section-title"><span>1</span><h2>原题复盘</h2></div>
+    <div class="original-grid"><div class="mini"><b>原题</b>52 - 28 = ?</div><div class="mini"><b>学生答案 / 正确答案</b>34 &nbsp;→&nbsp; 24</div><div class="mini" style="grid-column:1/-1"><b>第一处分歧</b>个位使用了12-8，但十位仍按5-2计算。</div></div>
+    <div class="section-title"><span>2</span><h2>错因诊断</h2></div>
+        <article class="diagnosis-card">
+          <div class="card-head"><h3>退位后的位值更新</h3><span class="badge">置信度 中</span></div>
+          <p><strong>观察证据：</strong>个位使用了12-8，但十位没有从5变为4。</p>
+          <p class="muted"><strong>另一种可能：</strong>也可能是书写时漏改十位，需要用一道对比题确认。</p>
+        </article>
+        
+    <div class="section-title"><span>3</span><h2>把关键一步讲明白</h2></div>
+    <div class="explain"><div class="speech">借来的1个十会变成10个一，同时十位必须少1。两个变化要一起做。</div><ol class="steps"><li>看个位：2不够减8。</li><li>从5个十中拿1个十换成10个一，个位变成12，十位剩4。</li><li>12-8=4，4-2=2，所以52-28=24。</li></ol></div>
+    <div class="section-title"><span>4</span><h2>分层变式训练</h2></div>
+        <section class="practice-block">
+          <div><span class="eyebrow">LEVEL 1</span><h3>第一关 · 同类巩固</h3><p>先把退位动作做完整</p></div>
+          <ol class="questions"><li><span>61 - 27 =</span><i></i></li><li><span>73 - 48 =</span><i></i></li></ol>
+        </section>
+        
+        <section class="practice-block">
+          <div><span class="eyebrow">LEVEL 2</span><h3>第二关 · 对比判断</h3><p>先判断要不要退位，再计算</p></div>
+          <ol class="questions"><li><span>64 - 21 =</span><i></i></li><li><span>64 - 29 =</span><i></i></li></ol>
+        </section>
+        
+        <section class="practice-block">
+          <div><span class="eyebrow">LEVEL 3</span><h3>第三关 · 迁移挑战</h3><p>换一种问法，方法仍然一样</p></div>
+          <ol class="questions"><li><span>停车场有82辆车，开走37辆，还剩多少辆？</span><i></i></li><li><span>□ - 26 = 38，□里填多少？</span><i></i></li></ol>
+        </section>
+        
+    <div class="section-title"><span>5</span><h2>延迟复习</h2></div><div class="review-grid">
+        <div class="review-card"><span class="calendar">1</span><div><strong>明天</strong><ul><li>72 - 46 =</li><li>80 - 35 =</li></ul></div></div>
+        
+        <div class="review-card"><span class="calendar">2</span><div><strong>3—7天后</strong><ul><li>91 - 57 =</li><li>一本书有74页，已经看了38页，还剩多少页？</li></ul></div></div>
+        </div>
+    <div class="section-title"><span>6</span><h2>给家长 / 教师</h2></div><div class="adult">下次重点观察：退位后，孩子是否会主动把十位数字减1。先保证准确，再计时。</div>
+  </div>
+  <section class="answer-page"><span class="eyebrow">ANSWER KEY</span><h2>答案与核验</h2><p class="muted">答案顺序：分层训练题在前，延迟复习题在后。</p><div class="answer-grid"><div class="answer"><span>1</span><strong>34</strong></div><div class="answer"><span>2</span><strong>25</strong></div><div class="answer"><span>3</span><strong>43</strong></div><div class="answer"><span>4</span><strong>35</strong></div><div class="answer"><span>5</span><strong>45辆</strong></div><div class="answer"><span>6</span><strong>64</strong></div><div class="answer"><span>7</span><strong>26</strong></div><div class="answer"><span>8</span><strong>45</strong></div><div class="answer"><span>9</span><strong>34</strong></div><div class="answer"><span>10</span><strong>36页</strong></div></div><div class="footer">错题不是标签，而是下一步教学的证据。</div></section>
+</main>
+</body>
+</html>
